@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+
+    <style>
+*
+{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.img-wrapper
+{
+  width: 500px;
+  height: calc(720px * 500px / 1280px);
+}
+.img-wrapper img
+{
+  width: 100%;
+}
+    </style>
+
+
+    <div class="img-wrapper">
+      <img src="gojo_1280x720.png" alt="">
+    </div>
+
+    <br>
+    <br>
+
+    <input type="color" id="colorPicker">
+    
+    <script>
+      const colorPicker = document.getElementById('colorPicker')
+const colorValue = document.getElementById('colorValue')
+
+colorPicker.addEventListener("input", function(){
+  document.querySelector('.img-wrapper').style.backgroundColor = this.value;
+})
+    </script>
+  </body>
+</html>
